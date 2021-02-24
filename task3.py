@@ -16,13 +16,13 @@ if equal_idx < 0:
     print("ERROR")
     exit(0)
 
-last = (read_number(record, equal_idx+1, len(record)))
+last = (read_number(record, equal_idx + 1, len(record)))
 
 # Parse first two numbers
 for idx, i in enumerate(record[1:equal_idx]):
     if i == '+' or i == '-' or i == '*' or i == '/':
-        first = read_number(record, 0, idx+1)
-        second = read_number(record, idx+2, equal_idx)
+        first = read_number(record, 0, idx + 1)
+        second = read_number(record, idx + 2, equal_idx)
 
         result = 0
         if i == '+':
