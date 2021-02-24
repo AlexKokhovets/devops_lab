@@ -3,7 +3,7 @@ def read_number(line: str, start: int, end: int) -> int:
         num = int(line[start:end])
         return num
     except ValueError:
-        print("Error")
+        print("ERROR")
         exit(0)
 
 
