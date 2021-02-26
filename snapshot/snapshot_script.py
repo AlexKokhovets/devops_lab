@@ -63,21 +63,21 @@ def write_to_json(line: str, file_name: str):
 
 
 def start_monitoring():
-   parser = argparse.ArgumentParser(description='Time of sleep.')
-   parser.add_argument("-s", "--sec", type=int, help='seconds between two snapshots (in seconds)', default=5)
-   parser.add_argument("-t", "--type", type=str, help="type of output file: txt or json")
+    parser = argparse.ArgumentParser(description='Time of sleep.')
+    parser.add_argument("-s", "--sec", type=int,
+                        help='seconds between two snapshots (in seconds)', default=5)
+    parser.add_argument("-t", "--type", type=str, help="type of output file: txt or json")
 
+    args = parser.parse_args()
+    sleep_time = args.sec
+    out_type = args.type
 
-   args = parser.parse_args()
-   sleep_time = args.sec
-   out_type = args.type
+    while True:
+        time.sleep(sleep_time)
 
-   while True:
-       time.sleep(sleep_time)
+        a = Snapshot()
 
-       a = Snapshot()
-
-       if out_type == "txt":
-           write_to_file(a.__str__(), "out.txt")
-       if out_type == "json":
-           write_to_json(json.dumps(a.__dict__), "out.json")
+        if out_type == "txt":
+            write_to_file(a.__str__(), "out.txt")
+        if out_type == "json":
+            write_to_json(json.dumps(a.__dict__), "out.json")
