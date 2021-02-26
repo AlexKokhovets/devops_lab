@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from setuptools import setup, find_packages
 
 setup(
@@ -5,7 +7,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'snapshot = sc.task1:start_monitoring',
+            'snapshot = snapshot.snapshot_script:start_monitoring',
 	],	
     }, 
     version="0.1",
