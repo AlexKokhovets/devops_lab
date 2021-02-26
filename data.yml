@@ -1,0 +1,9 @@
+apache_vhosts:
+  - servername: www.domain.tld
+    documentroot: /www/domain
+    serveradmin: www-admin@foo.example.com
+    directorypath: "/home/admin"
+  - servername: www.domain2.tld
+    documentroot: /www/domain2
+    serveradmin: www-user1@foo2.example.com
+    directorypath: "/home/user1"
