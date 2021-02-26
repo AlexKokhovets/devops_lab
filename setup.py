@@ -1,9 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="devops_lab",
+    name="snapshot",
     packages=find_packages(),
-    scripts=["task2.1.py"],
+    entry_points={
+        'console_scripts': [
+            'snapshot = sc.task1:start_monitoring',
+	],	
+    }, 
     version="0.1",
     author="Aliaksei Kakhavets",
     author_email="Aliaksei_Kakhavets@epam.com",
