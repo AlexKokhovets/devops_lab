@@ -1,4 +1,4 @@
-#DevOps Lab 2021 winter/spring
+# DevOps Lab 2021 winter/spring
 ## Homework 3 by Aliaksei Kakhavets
 
 ### Package information
