@@ -1,6 +1,6 @@
 import requests
 
-passw = ('AlexKokhovets', '892a7bc2de677a09966b3127a7cffab4ca417fb4')
+passw = ('user', 'pass')
 
 
 def get_pulls(state):
