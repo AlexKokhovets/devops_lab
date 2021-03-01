@@ -1,22 +1,22 @@
 import requests
 
-passw = ('user', 'pass')
+passw = ('AlexKokhovets', '892a7bc2de677a09966b3127a7cffab4ca417fb4')
 
 
 def get_pulls(state):
 
     if state in ('open', 'closed'):
-        response = requests.get(f'https://api.github.com/repos/alenaPy/devops_lab/pulls?state={state}&per_page=100',
-                                auth=passwd.passw)
+        response = requests.get('https://api.github.com/repos/alenaPy/devops_lab/'
+                                f'pulls?state={state}&per_page=100', auth=passw)
         pulls_list = response.json()
     elif state in ('needs work', 'accepted'):
         response = requests.get('https://api.github.com/search/issues?q=is:pr%20'
                                 f'label:\"{state}\"%20repo:alenaPy/devops_lab&per_page=100',
-                                auth=passwd.passw)
+                                auth=passw)
         pulls_list = response.json()['items']
     else:
-        response = requests.get('https://api.github.com/repos/alenaPy/devops_lab/pulls?state=all&per_page=100',
-                                auth=passwd.passw)
+        response = requests.get('https://api.github.com/repos/alenaPy/devops_lab/'
+                                'pulls?state=all&per_page=100', auth=passw)
         pulls_list = response.json()
 
     ans = []
